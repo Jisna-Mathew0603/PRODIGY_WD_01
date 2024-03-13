@@ -5,36 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive Navigation Menu</title>
 <style>
+
+  /* CSS styles for the page */
+
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
 
+  /* Styles for the navigation bar */
+
   .navbar {
     overflow: hidden;
-    background-color: #333;
-    position: fixed;
+    background-color: #333; 
     top: 0;
-    width: 100%;
-    transition: background-color 0.3s;
+    width: 100%; 
+    transition: background-color 0.3s; 
     z-index: 1000; 
   }
 
+  /* Styles for the links in the navbar */
+
   .navbar a {
-    float: left;
+    float: left; 
     display: block;
     color: #fff; 
     text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: color 0.3s;
+    padding: 14px 20px; 
+    text-decoration: none; 
+    transition: color 0.3s; 
   }
 
+  /* Styles for hovered links */
+
   .navbar a:hover {
-    background-color: #ddd; 
+    background-color: greenyellow; 
     color: #333; 
   }
+
+  /* Styles for the active link */
 
   .navbar a.active {
     background-color: #4CAF50; 
@@ -44,6 +54,7 @@
 </head>
 <body>
 
+<!-- Navigation menu -->
 <div class="navbar" id="navbar">
   <a href="#" class="active">Home</a>
   <a href="#">About</a>
@@ -51,20 +62,26 @@
   <a href="#">Contact</a>
 </div>
 
+<!-- Main content area -->
 <div style="height: 1000px; background-color: #f9f9f9; padding: 20px;">
-  <h1>Scroll down to see the effect</h2>
-  <p>This is the main content area. Scroll down to see the navigation menu change color when scrolled or hovered over.</p>
+  <h1>Hello see the effect</h1>
+  <p> See the navigation menu change color when hovered over.</p>
 </div>
 
+
 <script>
-  window.onscroll = function() {scrollFunction()};
+  // JavaScript for changing navbar color on scroll
+
+  window.onscroll = function() {
+    scrollFunction();
+  };
 
   function scrollFunction() {
     var navbar = document.getElementById("navbar");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      navbar.style.backgroundColor = "#555"; 
+      navbar.style.backgroundColor = "#555"; /* Change background color when scrolled */
     } else {
-      navbar.style.backgroundColor = "#333"; 
+      navbar.style.backgroundColor = "#333"; /* Revert to original background color */
     }
   }
 </script>
